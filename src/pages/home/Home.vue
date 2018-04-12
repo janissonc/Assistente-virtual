@@ -1,78 +1,57 @@
 <template>
-
-  <site-template>
-    <span slot="menuesquerdo">
-      <div class="row valign-wrapper">
-        <grid-vue tamanho="4">
-          <img :src="usuario.imagem" :alt="usuario.name" class="circle responsive-img"> <!-- notice the "circle" class -->
-        </grid-vue>
-        <grid-vue tamanho="8">
-          <span class="black-text">
-            <h5>{{usuario.name}}</h5>
-          </span>
-        </grid-vue>
-
-      </div>
-    </span>
-
-    <span slot="principal">
-      <publicar-conteudo-vue />
-
-
-      <card-conteudo-vue
-        perfil="http://materializecss.com/images/yuna.jpg"
-        nome="Maria Silva"
-        data="13/01/18 13:30">
-          <card-detalhe-vue
-            img="http://materializecss.com/images/sample-1.jpg"
-            titulo=""
-            txt="I am a very simple card. I am good at containing small bits of information.
-            I am convenient because I require little markup to use effectively."  />
-      </card-conteudo-vue>
-    </span>
+  <div class="hello">
+    <h1>{{ msg }}</h1>
+    <h2>Vue Js Design Model of the Guia Código</h2>
+    <ul>
 
 
 
-  </site-template>
+      <li>
+        <a
+          href="https://guiacodigo.com"
+          target="_blank"
+        >
+          Guia Código
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://twitter.com/guiacodigo"
+          target="_blank"
+        >
+          Twitter
+        </a>
+      </li>
+    </ul>
 
-
-
+  </div>
 </template>
 
 <script>
-import SiteTemplate from '@/templates/SiteTemplate'
-import CardConteudoVue from '@/components/social/CardConteudoVue'
-import CardDetalheVue from '@/components/social/CardDetalheVue'
-import PublicarConteudoVue from '@/components/social/PublicarConteudoVue'
-import GridVue from '@/components/layouts/GridVue'
-
-
 export default {
   name: 'Home',
   data () {
     return {
-      usuario:false
+      msg: 'Have a coffee with Vue JS!'
     }
-  },
-  created(){
-
-    let usuarioAux = sessionStorage.getItem('usuario');
-    if(usuarioAux){
-      this.usuario = JSON.parse(usuarioAux);
-
-    }
-  },
-  components:{
-    SiteTemplate,
-    CardConteudoVue,
-    CardDetalheVue,
-    PublicarConteudoVue,
-    GridVue
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+h1, h2 {
+  font-weight: normal;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #42b983;
+}
 </style>
