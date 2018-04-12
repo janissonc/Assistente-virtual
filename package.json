@@ -1,7 +1,7 @@
 {
-  "name": "guiacodigo",
+  "name": "vuejs_guia_codigo",
   "version": "1.0.0",
-  "description": "modelo para projetos com vue js",
+  "description": "Modelo para projetos com vue js do Guia Código",
   "author": "Guilherme Ferreira",
   "private": true,
   "scripts": {

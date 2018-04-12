@@ -1,6 +1,6 @@
-# guiacodigo
+# Vue JS Guia Código
 
-> modelo para projetos com vue js
+> Modelo para projetos com Vue JS do Guia Código
 
 ## Build Setup
 
